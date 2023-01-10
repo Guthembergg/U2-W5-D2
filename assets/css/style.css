@@ -6,9 +6,10 @@ body {
   font-family: Poppins, "Helvetica Neue", sans-serif;
   font-size: 1.1rem;
   line-height: 1.5;
-  padding: 15px;
+  padding: 5%;
   background-image: url("../img/sfondo.png");
   background-position: center center;
+  width: 100%;
 }
 * {
   box-sizing: border-box;
@@ -16,7 +17,16 @@ body {
 hr {
   display: none;
 } /* rimuove l'elemento */
-
+.relative {
+  position: relative;
+}
+.absolute {
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 60px;
+  width: 210px;
+  left: -150px;
+}
 /* HEADER */
 header {
   background: rgb(0, 160, 198);
@@ -31,7 +41,12 @@ header {
   color: white;
   box-shadow: 0 3px 3px #444;
   margin-bottom: 1em;
-  padding: 1em 1em;
+  padding: 5%;
+
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 90%;
 }
 header div img {
   margin-bottom: 10px;
@@ -60,14 +75,26 @@ main {
   box-shadow: 0 3px 3px #444;
   padding: 1em 1em;
   margin-bottom: 1.5em;
+  margin-top: 160px;
+  width: 100%;
 }
 article h2 {
   font-weight: bold;
+}
+article img {
+  width: 100%;
+  margin-right: 20px;
+}
+.badge {
+  width: 70;
+  height: 70;
+  float: left;
 }
 section {
   background-color: #e3e3e3;
   padding: 1em;
   margin-bottom: 2em;
+  position: relative;
 }
 section h2 {
   text-align: center;
@@ -77,6 +104,10 @@ section h2 {
   text-transform: uppercase;
   margin-bottom: 1em;
   background-color: rgb(154, 153, 153);
+  position: absolute;
+  width: 100px;
+  top: -10px;
+  left: 30px;
 }
 
 /* ELEMENTI NEL MAIN - ARTICLE */
@@ -85,6 +116,7 @@ h1 {
   font-weight: bold;
   letter-spacing: -0.03em;
   margin-bottom: 0.7em;
+  width: 250px;
 }
 p,
 address,
@@ -212,6 +244,36 @@ footer a {
   background-color: white;
   border: 0;
 }
+.button_1,
+.button_2,
+.button_3 {
+  width: 45px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: #cac4c460;
+  border: 2px solid rgba(255, 255, 255, 0.852);
+  position: fixed;
+  right: 0;
+}
+.button_1 {
+  top: 65%;
+  z-index: 3000;
+}
+.button_2 {
+  top: 75%;
+  z-index: 3000;
+}
+.button_3 {
+  top: 85%;
+}
+.calendar {
+  position: relative;
+}
+.calendar > i {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
 @media screen and (min-width: 576px) {
   body {
     font-size: 1.6rem;
@@ -238,7 +300,7 @@ footer a {
     margin-right: 1rem;
   }
   h1 {
-    font-size: 6rem;
+    font-size: 2.8rem;
   }
   table {
     margin-left: auto;
@@ -251,12 +313,22 @@ footer a {
     background-color: white;
     border: 0;
   }
+  .button_1 {
+    top: 10%;
+  }
+  .button_2 {
+    top: 17%;
+  }
+  .button_3 {
+    top: 85%;
+  }
 }
 @media screen and (min-width: 768px) {
   body {
     font-size: 1.3rem;
     margin-left: 7%;
-    width: 86%;
+    width: 85%;
+    padding: 0;
   }
   p {
     font-size: 1.3rem;
@@ -264,7 +336,7 @@ footer a {
   header {
     display: inline-flex;
     padding: 10px;
-    width: 100%;
+    width: 85%;
     padding-bottom: 0;
   }
   header div img {
@@ -280,6 +352,9 @@ footer a {
     display: inline-flex;
     margin: auto;
   }
+  header p {
+    width: 100%;
+  }
   header ul a {
     margin-right: 1rem;
   }
@@ -292,6 +367,7 @@ footer a {
   }
   h1 {
     font-size: 3.8rem;
+    width: 100%;
   }
   table {
     margin-left: auto;
@@ -318,6 +394,30 @@ footer a {
   }
   .aside div {
     width: 33%;
+  }
+  .relative {
+    position: relative;
+  }
+  .absolute {
+    background-repeat: no-repeat;
+    position: absolute;
+
+    top: 30px;
+    width: 330px;
+
+    left: -6px;
+  }
+  main {
+    margin-top: 70px;
+  }
+  .button_1 {
+    top: 10%;
+  }
+  .button_2 {
+    top: 17%;
+  }
+  .button_3 {
+    top: 85%;
   }
 }
 
